@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Focus",
+  "version": "1.0",
+  "description": "This chrome extension will help you focus on the task at hand and lead you to the path to success!",
+  "icons": {
+    "192": "icons/android-chrome-192x192.png",
+    "32": "icons/favicon-32x32.png",
+    "16": "icons/favicon-16x16.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["jquery.min.js", "./main.js"],
+      "css": ["index.css"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icons/apple-touch-icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Focus"
+  },
+  "permissions": ["tabs"]
+}
